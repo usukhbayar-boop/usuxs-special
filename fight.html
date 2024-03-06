@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who'd you rather</title>
+    <link rel="stylesheet" href="./style2.css" />
+  </head>
+  <body class="bg_heart">
+    <div id="header">
+      <h1><a href="index.html">WHO'D YOU RATHER?</a></h1>
+    </div>
+    <div id="main">
+      <h3>Were we let in for our looks? No. Will we be judged on them? Yes.</h3>
+      <h2>Who'd you rather? Click to Choose.</h2>
+      <table id="images">
+        <tr>
+          <td>
+            <button id="image1">
+              <img
+                id="img1"
+                src="https://zochil-cdn-dev.sgp1.cdn.digitaloceanspaces.com/1.jpg"
+              />
+            </button>
+          </td>
+          <td>OR</td>
+          <td>
+            <button id="image2">
+              <img
+                id="img2"
+                src="https://zochil-cdn-dev.sgp1.cdn.digitaloceanspaces.com/2.jpg"
+              />
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="footer">
+      <br />
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="submit.html">Submit</a>
+      <a href="rankings.html">Rankings</a>
+    </div>
+    <script>
+      let currentValue = 2;
+      function init() {
+        document.getElementById("image1").addEventListener("click", () => {
+          console.log("dsd");
+          if (currentValue > 15) {
+            document.getElementById("images").innerHTML = `
+                  <div class="contenedor">
+          <i class="fa fa-heart corazon" aria-hidden="true"></i>
+          <button id="image1">
+                    <img
+                      id="img1"
+                      src="https://zochil-cdn-dev.sgp1.cdn.digitaloceanspaces.com/1.jpg"
+                    />
+                  </button></div>`;
+          }
+          currentValue += 1;
+          document.getElementById(
+            "img2"
+          ).src = `https://zochil-cdn-dev.sgp1.cdn.digitaloceanspaces.com/${currentValue}.jpg`;
+
+          console.log(image1);
+        });
+
+        document.getElementById("image2").addEventListener("click", () => {
+          console.log("dsd");
+          currentValue += 1;
+          document.getElementById(
+            "img1"
+          ).src = `https://zochil-cdn-dev.sgp1.cdn.digitaloceanspaces.com/${currentValue}.jpg`;
+          console.log(image2);
+        });
+      }
+      init();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+body {
+  font-family: Tahoma;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-image: url("./love.jpg");
+}
+a {
+  text-decoration: none;
+  color: darkblue;
+}
+a:hover {
+  text-decoration: underline;
+}
+img {
+  width: 485px;
+  height: 510px;
+  border: 2px solid #aaa;
+}
+#header {
+  background-color: palevioletred;
+  color: #fff;
+  padding: 5px;
+}
+#header a {
+  color: rgb(222, 223, 224);
+  text-decoration: none;
+}
+#main table {
+  margin: 0 auto;
+}
+#footer {
+  font: 12px Tahoma;
+  margin: 25px 0 50px 0;
+}
+#footer a {
+  margin-right: 10px;
+}
