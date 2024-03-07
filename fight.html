@@ -17,19 +17,13 @@
         <tr>
           <td>
             <button id="image1">
-              <img
-                id="img1"
-                src="https://zochil-cdn-dev.sgp1.cdn.digitaloceanspaces.com/1.jpg"
-              />
+              <img id="img1" src="./public/1.jpg" />
             </button>
           </td>
           <td>OR</td>
           <td>
             <button id="image2">
-              <img
-                id="img2"
-                src="https://zochil-cdn-dev.sgp1.cdn.digitaloceanspaces.com/2.jpg"
-              />
+              <img id="img2" src="./public/2.jpg" />
             </button>
           </td>
         </tr>
@@ -44,34 +38,52 @@
     </div>
     <script>
       let currentValue = 2;
+      let value1 = 1;
+      let value2 = 2;
+      let arr1 = [];
+      let arr2 = [];
       function init() {
         document.getElementById("image1").addEventListener("click", () => {
           console.log("dsd");
-          if (currentValue > 15) {
-            document.getElementById("images").innerHTML = `
-                  <div class="contenedor">
-          <i class="fa fa-heart corazon" aria-hidden="true"></i>
-          <button id="image1">
-                    <img
-                      id="img1"
-                      src="https://zochil-cdn-dev.sgp1.cdn.digitaloceanspaces.com/1.jpg"
-                    />
-                  </button></div>`;
-          }
+
+          // if (currentValue > 14) {
+          //   document.getElementById("images").innerHTML = `
+          //         <div class="contenedor">
+          // <i class="fa fa-heart corazon" aria-hidden="true"></i>
+          // <button id="image1">
+          //           <img
+          //             id="img1"
+          //             src="./public/${arr1[arr1.length - 1]}.jpg"
+          //           />
+          //         </button></div>`;
+          // }
+          arr1.push(currentValue);
           currentValue += 1;
-          document.getElementById(
-            "img2"
-          ).src = `https://zochil-cdn-dev.sgp1.cdn.digitaloceanspaces.com/${currentValue}.jpg`;
+          document.getElementById("img2").src = `./public/${currentValue}.jpg`;
 
           console.log(image1);
         });
 
         document.getElementById("image2").addEventListener("click", () => {
           console.log("dsd");
+
+          // if (currentValue > 15) {
+          //   document.getElementById("images").innerHTML = `
+          //         <div class="contenedor">
+          // <i class="fa fa-heart corazon" aria-hidden="true"></i>
+          // <button id="image1">
+          //           <img
+          //             id="img1"
+          //             src="./public/${arr2[arr2.length - 1]}.jpg"
+          //           />
+          //         </button></div>`;
+          // }
+          arr2.push(currentValue);
           currentValue += 1;
+          value1 = value1 + 2;
           document.getElementById(
             "img1"
-          ).src = `https://zochil-cdn-dev.sgp1.cdn.digitaloceanspaces.com/${currentValue}.jpg`;
+          ).src = `./public/${(currentValue += 1)}.jpg`;
           console.log(image2);
         });
       }
